@@ -1,16 +1,18 @@
 package ru.netology.repository;
 
-import ru.netology.model.Post;
+import ru.netology.model.PostDTO;
 
 import java.util.List;
 import java.util.Optional;
 
 public interface PostRepository {
-    List<Post> all();
+    List<PostDTO> all();
 
-    Optional<Post> getById(long id);
+    Optional<PostDTO> getById(long id);
 
-    Post save(Post post);
+    PostDTO save(PostDTO post);
+
+    Optional<PostDTO> update(long id, PostDTO postDTO);
 
     void removeById(long id);
 }
